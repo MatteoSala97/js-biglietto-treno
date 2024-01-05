@@ -6,7 +6,3 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 - Va applicato uno sconto del 20% per i minorenni.
 - Va applicato uno sconto del 40% per gli over 65.
 - L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
-
-
-let: kmAmount, discount20, discount40, fullPrice.
-const: price = 0.21
