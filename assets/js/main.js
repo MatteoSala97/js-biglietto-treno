@@ -62,7 +62,7 @@ function finalPriceCalc(){
     }
 }
 
-// 
+// Method allowing to submit values for price calculation
 
 calcButton.addEventListener("click", function (e){
     getValues()
@@ -70,6 +70,8 @@ calcButton.addEventListener("click", function (e){
     console.log (finalPrice)
     result.innerHTML = "Your price is"+ " " + finalPrice.toFixed(2) + "€"
 })
+
+//Method allowing to reset all the values
 
 resetButton.addEventListener("click", function (e){
     kmAmountElement.value = 0
