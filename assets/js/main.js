@@ -1,5 +1,7 @@
 //Variables
-let kmAmount, psgAge;
+let 
+kmAmountElement = document.getElementById ("kmAmount"), 
+psgAgeElement = document.getElementById ("psgAge")
 //Const
 const kmPrice = 0.21;
 const discountUnder = 20
@@ -8,11 +10,16 @@ const discountOver = 40
 // kmAmount = 40
 // psgAge = 19
 
+let kmAmount, psgAge;
+
 let calcButton = document.getElementById 
 ("submitValues");
 
+let resetButton = document.getElementById("reset-all")
+
 let result = document.getElementById 
 ("result");
+
 
 
 
@@ -22,9 +29,9 @@ function getValues(){
     
 //Assigning variables values based on input areas numeric results
 
-    kmAmount = document.getElementById("kmAmount").value;
+    kmAmount = kmAmountElement.value;
 
-    psgAge = document.getElementById("psgAge").value;
+    psgAge = psgAgeElement.value;
 
     console.log (kmAmount, psgAge)
 }
@@ -55,6 +62,7 @@ function finalPriceCalc(){
     }
 }
 
+// 
 
 calcButton.addEventListener("click", function (e){
     getValues()
@@ -63,5 +71,9 @@ calcButton.addEventListener("click", function (e){
     result.innerHTML = "Your price is"+ " " + finalPrice.toFixed(2) + "€"
 })
 
-
+resetButton.addEventListener("click", function (e){
+    kmAmountElement.value = 0
+    psgAgeElement.value = 0
+    result.innerHTML = ""
+})
 
